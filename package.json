@@ -1,0 +1,32 @@
+{
+  "name": "tustnetwork-desktop",
+  "version": "1.0.0",
+  "description": "A GUI Client for the network of TUST",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "babel-node src/index.js",
+    "build": "babel src --out-dir lib",
+    "test": "echo 'No tests\\n'",
+    "dev": "pm2 start lib/index.js --watch --no-daemon"
+  },
+  "author": "Noah Gao",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-plugin-transform-es2015-parameters": "^6.24.1",
+    "babel-plugin-transform-es2015-spread": "^6.22.0",
+    "babel-plugin-transform-strict-mode": "^6.24.1",
+    "standard": "^10.0.3"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "cheerio": "^1.0.0-rc.2",
+    "nano-md5": "^1.0.3",
+    "node-axios-cookiejar": "^0.0.3",
+    "qs": "^6.5.1",
+    "tough-cookie": "^2.3.2"
+  }
+}
