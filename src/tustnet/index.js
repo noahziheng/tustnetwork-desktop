@@ -12,7 +12,7 @@ export default new (class TUSTNET {
   checkConnect () {
     return this.get().then(r => {
       if (r.status !== 200) throw new Error('Error Status Code(' + r.status + ')')
-      console.log(r.data)
+      return r.data.indexOf('function DispTFM') !== -1
     }).catch(err => {
       console.error(err)
       throw new Error('当前网络不是科大校园网或网关异常！')

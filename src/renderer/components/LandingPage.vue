@@ -8,15 +8,13 @@
 </template>
 
 <script>
-  import isOnline from 'is-online'
   import { MessageBox } from 'mint-ui'
 
   export default {
     name: 'landing-page',
     mounted () {
-      isOnline().then(r => {
-        if (r) this.handleCheckTUST()
-        else throw new Error('您未连接网络！')
+      this.tustnet.checkConnect().then(r => {
+        console.log(r)
       }).catch(this.handleError)
       /* this.$http.get('http://59.67.0.220').then(r => {
         console.log(r)
@@ -32,11 +30,6 @@
       }) */
     },
     methods: {
-      handleCheckTUST () {
-        this.tustnet.checkConnect().then(r => {
-          ;
-        }).catch(this.handleError)
-      },
       handleError (msg) {
         msg = msg instanceof Error ? msg.message : msg
         console.error(msg)
