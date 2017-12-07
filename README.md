@@ -1,6 +1,10 @@
-# tustnetwork-desktop
+# The project is deprecated and unfinished!!!Not recommended for use directly.
 
-> A GUI Client for TUST Network
+# 该项目已被废弃且尚未完成！！！不建议直接使用
+
+# 天津科技大学第三方校园网客户端
+
+> A third-party GUI client for education network of Tianjin University of Science and Technology
 
 #### Build Setup
 

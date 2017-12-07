@@ -3,10 +3,13 @@
   "version": "0.0.0",
   "author": "Noah Gao <noahgaocn@outlook.com>",
   "description": "A GUI Client for TUST Network",
-  "license": null,
+  "license": "MIT",
   "main": "./dist/electron/main.js",
   "scripts": {
-    "build": "node .electron-vue/build.js && electron-builder",
+    "build": "node .electron-vue/build.js && electron-builder --mwl",
+    "build:win": "node .electron-vue/build.js && electron-builder --win",
+    "build:linux": "node .electron-vue/build.js && electron-builder --linux",
+    "build:mac": "node .electron-vue/build.js && electron-builder --mac",
     "build:dir": "node .electron-vue/build.js && electron-builder --dir",
     "build:clean": "cross-env BUILD_TARGET=clean node .electron-vue/build.js",
     "build:web": "cross-env BUILD_TARGET=web node .electron-vue/build.js",
@@ -52,12 +55,12 @@
       "icon": "build/icons/icon.ico"
     },
     "linux": {
+      "category": "Utility",
       "icon": "build/icons"
     }
   },
   "dependencies": {
     "axios": "^0.16.1",
-    "electron-updater": "^2.8.9",
     "mint-ui": "^2.2.9",
     "vue": "^2.3.3",
     "vue-electron": "^1.0.6",
@@ -83,10 +86,11 @@
     "css-loader": "^0.28.4",
     "del": "^3.0.0",
     "devtron": "^1.4.0",
-    "electron": "~1.8.0",
+    "electron": "^1.7.8",
     "electron-builder": "^19.19.1",
     "electron-debug": "^1.4.0",
     "electron-devtools-installer": "^2.2.0",
+    "electron-updater": "^2.8.9",
     "eslint": "^4.4.1",
     "eslint-config-standard": "^10.2.1",
     "eslint-friendly-formatter": "^3.0.0",
